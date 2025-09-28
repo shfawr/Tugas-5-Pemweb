@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Registrasi Mahasiswa</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+  <h2>Form Registrasi Mahasiswa</h2>
+  <form id="regForm">
+    <label for="nama">Nama Mahasiswa</label>
+    <input list="namaList" id="nama" name="nama" placeholder="Masukkan nama..." required>
+    <datalist id="namaList">
+      <option value="Andi">
+      <option value="Budi">
+      <option value="Citra">
+      <option value="Dewi">
+      <option value="Eka">
+      <option value="Fathiya Husna">
+      <option value="Gita">
+      <option value="Hendra">
+      <option value="Intan">
+      <option value="Joko">
+      <option value="Kineisha Rana">
+      <option value="Lestari">
+      <option value="Made">
+      <option value="Nina">
+      <option value="Oscar">
+      <option value="Putri">
+      <option value="Qori">
+      <option value="Rizki">
+      <option value="Shifa Alya Dewi">
+      <option value="Tono">
+      <option value="Umar">
+      <option value="Vina">
+      <option value="Wawan">
+      <option value="Xenia">
+      <option value="Yoga">
+      <option value="Zahra">
+    </datalist>
+
+    <label for="nrp">NRP</label>
+    <input type="text" id="nrp" name="nim" placeholder="Masukkan NRP" required>
+
+    <label for="matkul">Mata Kuliah</label>
+    <select id="matkul" name="matkul" required>
+  <option value="">-- Pilih Mata Kuliah --</option>
+  <option value="Pemrograman Web">Pemrograman Web</option>
+  <option value="Jaringan Komputer">Jaringan Komputer</option>
+  <option value="KKA">KKA</option>
+  <option value="KPPL">KPPL</option>
+  <option value="PBO">PBO</option>
+</select>
+
+    <label for="dosen">Dosen</label>
+    <input list="dosenList" id="dosen" name="dosen" placeholder="Masukkan nama dosen..." required>
+    <datalist id="dosenList">
+      <option value="Dr. Fajar Baskoro">
+      <option value="Prof. Nanik Suciati">
+      <option value="Ir. Bambang Hadi">
+      <option value="M. Yudi, M.Kom">
+      <option value="Dra. Ratna Dewi">
+    </datalist>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById("regForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+      let nama = document.getElementById("nama").value;
+      let nrp = document.getElementById("nrp").value;
+      let matkul = document.getElementById("matkul").value;
+      let dosen = document.getElementById("dosen").value;
+
+      if(nama === "" || nrp === "" || matkul === "" || dosen === ""){
+        alert("Semua field harus diisi!");
+      } 
+      else {
+        alert("Registrasi berhasil!\nNama: " + nama + "\nNRP: " + nrp + "\nMata Kuliah: " + matkul + "\nDosen: " + dosen);
+      }
+    }
+);
+  </script>
+
+</body>
+</html>
