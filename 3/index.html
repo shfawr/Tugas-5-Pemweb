@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic Drop Down List</title>
+        <style>
+            body{
+                font-family:'Times New Roman', Times, serif;
+                margin: 35px;
+                background-color: rgb(255, 141, 160);
+            }
+            h2{
+                text-align: center;
+                font-style:initial
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Dynamic Drop Down List Menggunakan Java Script</h2>
+
+        <select id="produk" onchange="ubahMerk(this.value)">
+            <option value="Desktop">Desktop</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Smartphone">Smartphone</option>
+        </select>
+
+        <select id="merk">
+            <option value="">Pilih Merk</option>
+        </select>
+
+        <script>
+        const dat ={
+            "Desktop": ["Dell", "HP", "Lenovo"],
+            "Laptop": ["Asus", "Acer", "MSI", "MacBook", "Lenovo"],
+            "Smartphone": ["Samsung", "Xiaomi", "iPhone", "Oppo"]
+        };
+        
+        function ubahMerk(produk) {
+        let merkDropdown = document.getElementById("merk");
+        merkDropdown.innerHTML = "<option value=''>Pilih Merk</option>"; 
+      if (produk in dat) {
+        dat[produk].forEach(function(merk) {
+          let option = document.createElement("option");
+          option.value = merk;
+          option.text = merk;
+          merkDropdown.add(option);
+        });
+      }
+    }
+
+        </script>
+    </body>
+</html>
