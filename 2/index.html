@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kode Pos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <h2>Kode Pos</h2>
+
+    <form id="form-kodepos">
+      <label for="provinsi">Provinsi:</label>
+      <select id="provinsi" required>
+        <option value=""></option>
+      </select>
+
+      <label for="kot">Kota/Kab:</label>
+      <select id="kot" required>
+        <option value=""></option>
+      </select>
+
+      <label for="kec">Kecamatan:</label>
+      <select id="kec" required>
+        <option value=""></option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="output" class="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
