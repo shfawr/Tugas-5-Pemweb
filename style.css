@@ -1,0 +1,40 @@
+body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  margin: 30px;
+  background: black;
+  background-size: cover;
+}
+h2 {
+  text-align: center;
+  color: rgb(255, 141, 160);
+}
+form {
+  background:rgb(255, 141, 160);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: auto;
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid rgb(152, 147, 147);
+  border-radius: 5px;
+}
+button {
+  background: black;
+  color: rgb(255, 141, 160);
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+button:hover {
+  background: rgb(233, 101, 123);
+}
